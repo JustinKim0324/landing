@@ -853,6 +853,40 @@ window.addEventListener('error', function(e) {
 
 // ============================================
 // 페이지 로드 완료 로그
+// FAQ 아코디언 기능
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    const icon = item.querySelector('.faq-icon');
+    
+    question.addEventListener('click', () => {
+      const isOpen = item.classList.contains('active');
+      
+      // 모든 FAQ 닫기
+      faqItems.forEach(otherItem => {
+        otherItem.classList.remove('active');
+        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+        otherItem.querySelector('.faq-icon').textContent = '+';
+      });
+      
+      // 클릭한 항목 토글
+      if (!isOpen) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        icon.textContent = '−';
+      }
+    });
+  });
+}
+
+// DOMContentLoaded에 추가
+document.addEventListener('DOMContentLoaded', function() {
+  // ... 기존 코드 ...
+  initFAQ();
+});
 // ============================================
 console.log('산재路 Landing Page - 법무법인 선인파트너스');
 console.log('JavaScript file loaded successfully');
