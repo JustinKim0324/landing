@@ -48,7 +48,7 @@ const LeadForm = () => {
           className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-gray-100"
         >
           {!submitted ? (
-            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" autoComplete="off">
               {/* Name Field */}
               <div>
                 <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2">
@@ -62,6 +62,7 @@ const LeadForm = () => {
                   })}
                   type="text"
                   placeholder="홍길동"
+                  autoComplete="off"
                   className={`w-full px-4 py-4 rounded-xl border-2 ${
                     errors.name ? 'border-red-500' : 'border-gray-200'
                   } focus:border-blue-500 focus:outline-none transition-colors text-lg`}
@@ -87,6 +88,7 @@ const LeadForm = () => {
                   })}
                   type="tel"
                   placeholder="010-1234-5678"
+                  autoComplete="off"
                   className={`w-full px-4 py-4 rounded-xl border-2 ${
                     errors.phone ? 'border-red-500' : 'border-gray-200'
                   } focus:border-blue-500 focus:outline-none transition-colors text-lg`}
