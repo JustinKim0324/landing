@@ -52,7 +52,7 @@ const ChatBot = () => {
 
       const genAI = new GoogleGenerativeAI(apiKey);
       const model = genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash",
+        model: "gemini-2.5-flash",
         systemInstruction: `당신은 법무법인 선인파트너스 산재路의 친절한 상담 챗봇입니다.
 
 **역할:**
