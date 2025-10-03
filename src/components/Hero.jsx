@@ -8,7 +8,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-12 pt-24">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-12">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -68,12 +68,12 @@ const Hero = () => {
           </motion.div>
 
           {/* Main Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-relaxed">
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
-              className="block mb-3"
+              className="block"
             >
               산재 승인
             </motion.span>
@@ -81,7 +81,7 @@ const Hero = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6 }}
-              className="block mb-3"
+              className="block"
             >
               거부당하셨나요?
             </motion.span>
