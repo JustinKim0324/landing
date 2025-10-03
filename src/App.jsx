@@ -5,6 +5,7 @@ import Features from './components/Features';
 import Security from './components/Security';
 import LeadForm from './components/LeadForm';
 import Footer from './components/Footer';
+import ChatBot from './components/ChatBot';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Security />
       <LeadForm />
       <Footer />
+      <ChatBot />
     </div>
   );
 }
