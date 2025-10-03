@@ -169,31 +169,6 @@ const Hero = () => {
             ⚠️ 산재 신청 기한은 <strong className="text-red-600">3년</strong>입니다. 시효 만료 전 지금 바로 상담받으세요
           </motion.p>
         </motion.div>
-
-        {/* Illustration Placeholder */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.8 }}
-          className="mt-16 relative"
-        >
-          <div className="relative max-w-md mx-auto">
-            {/* Simple illustration using CSS */}
-            <div className="relative bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl p-8 shadow-2xl">
-              <div className="absolute -top-4 -right-4 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-                <span className="text-2xl font-bold">✓</span>
-              </div>
-              <div className="bg-white rounded-2xl p-6 mb-4">
-                <div className="h-3 bg-gray-200 rounded w-3/4 mb-3"></div>
-                <div className="h-3 bg-gray-200 rounded w-1/2"></div>
-              </div>
-              <div className="bg-white rounded-2xl p-6">
-                <div className="h-3 bg-gray-200 rounded w-full mb-3"></div>
-                <div className="h-3 bg-gray-200 rounded w-2/3"></div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
