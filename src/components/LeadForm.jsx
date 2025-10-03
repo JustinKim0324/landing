@@ -36,7 +36,7 @@ const LeadForm = () => {
             </span>
           </h2>
           <p className="section-subtitle">
-            간단한 정보만으로 30초 안에 상담 신청 가능합니다
+            간단한 정보만으로 빠르게 상담 신청 가능합니다
           </p>
         </motion.div>
 

@@ -111,7 +111,7 @@ const Hero = () => {
             transition={{ delay: 1.2 }}
             className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            <span className="text-accent-600 font-semibold">지금 바로 30초 진단</span>으로 확인하세요
+            <span className="text-accent-600 font-semibold">전문가 상담으로 승인 여부를 확인하세요</span>
             <br />
             15년 전문 경력의 변호사·노무사가 함께합니다
           </motion.p>
