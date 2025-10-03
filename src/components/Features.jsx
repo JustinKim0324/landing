@@ -6,8 +6,8 @@ const Features = () => {
   const features = [
     {
       icon: Users,
-      title: '노무사 + 변호사',
-      description: '공인노무사와 변호사가 함께 사건을 진행합니다',
+      title: '변호사 + 노무사',
+      description: '변호사와 공인노무사가 함께 사건을 진행합니다',
       color: 'blue'
     },
     {

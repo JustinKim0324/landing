@@ -113,7 +113,7 @@ const Hero = () => {
           >
             <span className="text-accent-600 font-semibold">지금 바로 30초 진단</span>으로 확인하세요
             <br />
-            15년 전문 경력의 노무사·변호사가 함께합니다
+            15년 전문 경력의 변호사·노무사가 함께합니다
           </motion.p>
 
           {/* Stats */}
@@ -134,8 +134,8 @@ const Hero = () => {
               <div className="flex items-center justify-center mb-2">
                 <Scale className="w-8 h-8 text-blue-600" />
               </div>
-              <p className="text-2xl md:text-3xl font-bold text-gray-900">노무사</p>
-              <p className="text-sm text-gray-600">+변호사</p>
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">변호사</p>
+              <p className="text-sm text-gray-600">+노무사</p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
               <div className="flex items-center justify-center mb-2">

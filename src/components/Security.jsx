@@ -22,7 +22,7 @@ const Security = () => {
     {
       icon: FileCheck,
       title: '법무법인 운영',
-      description: '공인노무사와 변호사가 함께하는 전문 법무법인입니다'
+      description: '변호사와 공인노무사가 함께하는 전문 법무법인입니다'
     }
   ];
 
@@ -131,7 +131,7 @@ const Security = () => {
             산재 승인 거부, 보상금 부족으로 고민이신가요?
           </h3>
           <p className="text-lg md:text-xl mb-6 opacity-90">
-            노무사·변호사가 함께하는<br className="md:hidden" />
+            변호사·노무사가 함께하는<br className="md:hidden" />
             산재 전문 법무법인이 도와드립니다
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm md:text-base">

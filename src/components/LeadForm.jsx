@@ -186,7 +186,7 @@ const LeadForm = () => {
                 상담 신청이 완료되었습니다!
               </h3>
               <p className="text-lg text-gray-600 mb-2">
-                산재 전문 노무사·변호사가 빠르게 연락드리겠습니다.
+                산재 전문 변호사·노무사가 빠르게 연락드리겠습니다.
               </p>
               <p className="text-sm text-gray-500">
                 24시간 접수 가능 | 영업시간: 평일 09:00 - 18:00
