@@ -390,7 +390,7 @@ Error generating stack: `+s.message+`
 
 산재 승인, 거부, 재심사 등 궁금하신 점을 편하게 물어보세요.
 
-*간단한 안내만 제공되며, 정확한 상담은 전문가와 진행됩니다.*`}]),[i,s]=A.useState(""),[o,l]=A.useState(!1),a=A.useRef(null),u=A.useRef(null),c=()=>{var d;(d=a.current)==null||d.scrollIntoView({behavior:"smooth"})};A.useEffect(()=>{c()},[n]),A.useEffect(()=>{e&&u.current&&u.current.focus()},[e]);const f=async d=>{if(d.preventDefault(),!i.trim()||o)return;const y=i.trim();s(""),r(x=>[...x,{role:"user",content:y}]),l(!0);try{const x="AIzaSyBFy0A6nvS3hJ3YQ6KatPWU1zJ7AK12gsc",S=(await(await new yC(x).getGenerativeModel({model:"gemini-1.5-flash",systemInstruction:`당신은 법무법인 선인파트너스 산재路의 친절한 상담 챗봇입니다.
+*간단한 안내만 제공되며, 정확한 상담은 전문가와 진행됩니다.*`}]),[i,s]=A.useState(""),[o,l]=A.useState(!1),a=A.useRef(null),u=A.useRef(null),c=()=>{var d;(d=a.current)==null||d.scrollIntoView({behavior:"smooth"})};A.useEffect(()=>{c()},[n]),A.useEffect(()=>{e&&u.current&&u.current.focus()},[e]);const f=async d=>{if(d.preventDefault(),!i.trim()||o)return;const y=i.trim();s(""),r(x=>[...x,{role:"user",content:y}]),l(!0);try{const x="AIzaSyBFy0A6nvS3hJ3YQ6KatPWU1zJ7AK12gsc",S=(await(await new yC(x).getGenerativeModel({model:"gemini-2.5-flash",systemInstruction:`당신은 법무법인 선인파트너스 산재路의 친절한 상담 챗봇입니다.
 
 **역할:**
 - 산재(산업재해) 관련 기본적인 정보를 친절하고 따뜻하게 안내합니다
