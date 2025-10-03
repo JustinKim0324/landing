@@ -1591,3 +1591,439 @@ section {
     background: linear-gradient(135deg, var(--color-brand-dark) 0%, var(--color-surface) 100%);
   }
 }
+/* 기존 style.css에 이 내용을 추가하세요 */
+
+/* ============================================
+   긴급성 배너
+   ============================================ */
+.urgency-banner {
+  background: linear-gradient(90deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 14px;
+  animation: slideDown 0.5s ease-out;
+  position: relative;
+  z-index: 101;
+}
+
+.urgency-icon {
+  font-size: 18px;
+  margin-right: 8px;
+  animation: shake 2s infinite;
+}
+
+.urgency-text {
+  font-weight: 500;
+}
+
+.urgency-text strong {
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-5px) rotate(-5deg); }
+  75% { transform: translateX(5px) rotate(5deg); }
+}
+
+/* ============================================
+   플로팅 CTA 버튼
+   ============================================ */
+.floating-cta {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  animation: bounce 2s infinite;
+}
+
+.btn-floating {
+  background: linear-gradient(135deg, var(--color-brand-secondary) 0%, #047857 100%);
+  color: white;
+  padding: 16px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 20px rgba(5, 150, 105, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-floating:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 30px rgba(5, 150, 105, 0.7);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 모바일에서는 하단 고정 */
+@media (max-width: 768px) {
+  .floating-cta {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 12px;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    animation: none;
+  }
+  
+  .btn-floating {
+    width: 100%;
+    justify-content: center;
+    border-radius: 8px;
+  }
+}
+
+/* ============================================
+   Hero 개선
+   ============================================ */
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30, 58, 138, 0.1);
+  border: 1px solid rgba(30, 58, 138, 0.2);
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-brand-primary);
+  margin-bottom: var(--space-16);
+}
+
+.badge-icon {
+  font-size: 16px;
+}
+
+.hero__title .highlight {
+  color: var(--color-brand-secondary);
+  position: relative;
+}
+
+.hero__title .highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-brand-secondary);
+  border-radius: 2px;
+}
+
+.hero__subtitle strong {
+  color: var(--color-brand-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* 실시간 알림 */
+.live-notification {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(5, 150, 105, 0.1);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  margin-top: var(--space-20);
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  background: #dc2626;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+.live-text strong {
+  color: var(--color-brand-secondary);
+  font-weight: var(--font-weight-bold);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* ============================================
+   결과 단계 개선
+   ============================================ */
+.result-cta-highlight {
+  background: rgba(30, 58, 138, 0.05);
+  border: 2px solid rgba(30, 58, 138, 0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-20);
+  margin: var(--space-24) 0;
+}
+
+.result-cta-text {
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin: 0;
+  text-align: center;
+}
+
+.result-cta-text strong {
+  color: var(--color-brand-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ============================================
+   Trust Section (신뢰 지표)
+   ============================================ */
+.trust {
+  background: var(--color-surface);
+  padding: 80px 0;
+}
+
+.trust__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-24);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.trust-card {
+  background: var(--color-bg-3);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  text-align: center;
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.trust-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-brand-secondary);
+}
+
+.trust-card__icon {
+  font-size: 48px;
+  margin-bottom: var(--space-16);
+}
+
+.trust-card__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brand-primary);
+  margin-bottom: var(--space-12);
+}
+
+.trust-card__description {
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* ============================================
+   Modal 개선
+   ============================================ */
+.modal__intro {
+  background: rgba(30, 58, 138, 0.05);
+  border: 1px solid rgba(30, 58, 138, 0.15);
+  border-radius: var(--radius-md);
+  padding: var(--space-16);
+  margin: 0 var(--space-24) var(--space-24);
+  text-align: center;
+}
+
+.modal__intro p {
+  margin: 0;
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.modal__intro strong {
+  color: var(--color-brand-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+.modal__footer {
+  background: var(--color-bg-1);
+  padding: var(--space-16) var(--space-24);
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.modal__notice {
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.modal__notice strong {
+  color: var(--color-brand-secondary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ============================================
+   Footer 개선
+   ============================================ */
+.footer__info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--font-size-sm);
+  margin: var(--space-4) 0;
+  line-height: 1.6;
+}
+
+/* ============================================
+   반응형 개선
+   ============================================ */
+@media (max-width: 768px) {
+  .urgency-banner {
+    font-size: 12px;
+    padding: 10px 0;
+  }
+  
+  .urgency-text strong {
+    font-size: 14px;
+  }
+  
+  .hero__badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+  
+  .live-notification {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+  
+  .trust__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-16);
+  }
+  
+  .trust-card {
+    padding: var(--space-24);
+  }
+  
+  .trust-card__icon {
+    font-size: 40px;
+  }
+  
+  .result-cta-highlight {
+    padding: var(--space-16);
+  }
+  
+  .result-cta-text {
+    font-size: var(--font-size-sm);
+  }
+  
+  .modal__intro {
+    margin: 0 var(--space-16) var(--space-16);
+    padding: var(--space-12);
+  }
+  
+  .modal__intro p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__features {
+    gap: var(--space-12);
+  }
+  
+  .feature {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .feature__icon {
+    font-size: var(--font-size-xl);
+  }
+  
+  .feature__text {
+    font-size: 11px;
+  }
+}
+
+/* ============================================
+   추가 애니메이션
+   ============================================ */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.test-system {
+  animation: fadeInScale 0.6s ease-out;
+}
+
+/* 헤더 고정 시 배경 */
+.header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 다크모드 추가 조정 */
+@media (prefers-color-scheme: dark) {
+  .header.scrolled {
+    background: rgba(31, 33, 33, 0.98);
+  }
+  
+  .urgency-banner {
+    background: linear-gradient(90deg, #991b1b 0%, #7f1d1d 100%);
+  }
+  
+  .floating-cta {
+    background: rgba(31, 33, 33, 0.8);
+  }
+  
+  .btn-floating {
+    background: linear-gradient(135deg, var(--color-teal-400) 0%, var(--color-teal-600) 100%);
+  }
+  
+  .live-notification {
+    background: rgba(50, 184, 198, 0.1);
+    border-color: rgba(50, 184, 198, 0.2);
+  }
+  
+  .trust-card {
+    background: rgba(50, 184, 198, 0.05);
+  }
+}
