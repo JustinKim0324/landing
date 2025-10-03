@@ -1,0 +1,194 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { ChevronDown, Sparkles, TrendingDown, Shield } from 'lucide-react';
+
+const Hero = () => {
+  const scrollToForm = () => {
+    document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-12">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+          animate={{
+            x: [0, 100, 0],
+            y: [0, 50, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+          animate={{
+            x: [0, -100, 0],
+            y: [0, 100, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute -bottom-32 left-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-30"
+          animate={{
+            x: [0, 50, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Badge */}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6"
+          >
+            <Sparkles className="w-4 h-4" />
+            <span className="text-sm font-semibold">정부지원 제도 안내</span>
+          </motion.div>
+
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4 }}
+              className="block"
+            >
+              10초만에
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6 }}
+              className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+            >
+              간편조회
+            </motion.span>
+          </h1>
+
+          {/* Subheadline */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+            className="text-xl md:text-3xl text-gray-700 font-semibold mb-4"
+          >
+            내 대출금 줄일 수 있다?!
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1 }}
+            className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
+          >
+            간단한 정보만 입력하면 정부제도 조회 끝!
+            <br />
+            <span className="text-accent-600 font-semibold">최대 90% 대출 감면</span> 가능 여부를 확인하세요
+          </motion.p>
+
+          {/* Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2 }}
+            className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-12"
+          >
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+              <div className="flex items-center justify-center mb-2">
+                <TrendingDown className="w-8 h-8 text-accent-600" />
+              </div>
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">90%</p>
+              <p className="text-sm text-gray-600">최대 감면율</p>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+              <div className="flex items-center justify-center mb-2">
+                <Shield className="w-8 h-8 text-blue-600" />
+              </div>
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">100%</p>
+              <p className="text-sm text-gray-600">정보 보안</p>
+            </div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
+              <div className="flex items-center justify-center mb-2">
+                <Sparkles className="w-8 h-8 text-purple-600" />
+              </div>
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">10초</p>
+              <p className="text-sm text-gray-600">빠른 조회</p>
+            </div>
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.button
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.4 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={scrollToForm}
+            className="btn-primary text-lg md:text-xl inline-flex items-center gap-2"
+          >
+            무료로 조회하기
+            <ChevronDown className="w-5 h-5 animate-bounce" />
+          </motion.button>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.6 }}
+            className="mt-4 text-sm text-gray-500"
+          >
+            ※ 개인정보는 암호화되어 안전하게 처리됩니다
+          </motion.p>
+        </motion.div>
+
+        {/* Illustration Placeholder */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 1.8 }}
+          className="mt-16 relative"
+        >
+          <div className="relative max-w-md mx-auto">
+            {/* Simple illustration using CSS */}
+            <div className="relative bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl p-8 shadow-2xl">
+              <div className="absolute -top-4 -right-4 bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                <span className="text-2xl font-bold">✓</span>
+              </div>
+              <div className="bg-white rounded-2xl p-6 mb-4">
+                <div className="h-3 bg-gray-200 rounded w-3/4 mb-3"></div>
+                <div className="h-3 bg-gray-200 rounded w-1/2"></div>
+              </div>
+              <div className="bg-white rounded-2xl p-6">
+                <div className="h-3 bg-gray-200 rounded w-full mb-3"></div>
+                <div className="h-3 bg-gray-200 rounded w-2/3"></div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
