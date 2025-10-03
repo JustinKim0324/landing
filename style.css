@@ -2025,5 +2025,51 @@ section {
   
   .trust-card {
     background: rgba(50, 184, 198, 0.05);
+    .reviews {
+  background: var(--color-bg-8);
+  padding: 80px 0;
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-24);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.review-rating {
+  font-size: 20px;
+  margin-bottom: var(--space-12);
+}
+
+.review-text {
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-16);
+  font-style: italic;
+}
+
+.review-author {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-align: right;
+  margin: 0;
+}
   }
 }
