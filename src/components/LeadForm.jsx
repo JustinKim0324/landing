@@ -30,13 +30,13 @@ const LeadForm = () => {
           className="text-center mb-12"
         >
           <h2 className="section-title">
-            정부제도 조회를 위해<br className="md:hidden" />
+            무료 상담 신청<br className="md:hidden" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-              고객님의 정보를 입력해주세요
+              지금 바로 전문가와 상담하세요
             </span>
           </h2>
           <p className="section-subtitle">
-            간단한 정보만으로 10초 안에 조회 가능합니다
+            간단한 정보만으로 30초 안에 상담 신청 가능합니다
           </p>
         </motion.div>
 
@@ -96,41 +96,44 @@ const LeadForm = () => {
                 )}
               </div>
 
-              {/* Debt Amount Field */}
+              {/* Injury Type Field */}
               <div>
                 <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2">
                   <DollarSign className="w-5 h-5 text-blue-600" />
-                  대출 금액 (선택)
+                  산재 유형 (선택)
                 </label>
                 <select
-                  {...register('debtAmount')}
+                  {...register('injuryType')}
                   className="w-full px-4 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors text-lg bg-white"
                 >
                   <option value="">선택해주세요</option>
-                  <option value="under1000">1천만원 미만</option>
-                  <option value="1000-3000">1천만원 ~ 3천만원</option>
-                  <option value="3000-5000">3천만원 ~ 5천만원</option>
-                  <option value="5000-10000">5천만원 ~ 1억원</option>
-                  <option value="over10000">1억원 이상</option>
+                  <option value="musculoskeletal">근골격계 질환</option>
+                  <option value="cerebrovascular">뇌심혈관계 질환</option>
+                  <option value="mental_illness">정신질환</option>
+                  <option value="occupational_cancer">직업성 암</option>
+                  <option value="respiratory_disease">호흡기 질환</option>
+                  <option value="accident">업무상 사고</option>
+                  <option value="commute">출퇴근 재해</option>
+                  <option value="other">기타</option>
                 </select>
               </div>
 
-              {/* Age Field */}
+              {/* Status Field */}
               <div>
                 <label className="flex items-center gap-2 text-gray-700 font-semibold mb-2">
                   <Calendar className="w-5 h-5 text-blue-600" />
-                  연령대 (선택)
+                  현재 상황 (선택)
                 </label>
                 <select
-                  {...register('age')}
+                  {...register('status')}
                   className="w-full px-4 py-4 rounded-xl border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors text-lg bg-white"
                 >
                   <option value="">선택해주세요</option>
-                  <option value="20s">20대</option>
-                  <option value="30s">30대</option>
-                  <option value="40s">40대</option>
-                  <option value="50s">50대</option>
-                  <option value="60plus">60대 이상</option>
+                  <option value="rejected">산재 승인 거부됨</option>
+                  <option value="insufficient">보상금이 부족함</option>
+                  <option value="considering">산재 신청 고민 중</option>
+                  <option value="grade_dispute">장해등급 불만족</option>
+                  <option value="other">기타 상담</option>
                 </select>
               </div>
 
@@ -146,7 +149,7 @@ const LeadForm = () => {
                     <span className="font-semibold text-gray-900">[필수]</span> 개인정보 수집 및 이용에 동의합니다.
                     <br />
                     <span className="text-xs text-gray-500">
-                      입력하신 정보는 상담 목적으로만 사용되며, 조회 후 안전하게 폐기됩니다.
+                      입력하신 정보는 상담 목적으로만 사용되며, 상담 후 안전하게 폐기됩니다.
                     </span>
                   </span>
                 </label>
@@ -163,11 +166,11 @@ const LeadForm = () => {
                 className="w-full btn-primary text-xl flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
-                무료 조회하기
+                💬 무료 상담 신청하기
               </motion.button>
 
               <p className="text-center text-sm text-gray-500">
-                ※ 조회는 무료이며, 영업시간 내 전문가가 연락드립니다
+                ※ 상담은 무료이며, 24시간 접수 가능합니다. 전문가가 빠르게 연락드립니다
               </p>
             </form>
           ) : (
@@ -180,13 +183,13 @@ const LeadForm = () => {
                 <CheckCircle className="w-12 h-12 text-green-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                조회 신청이 완료되었습니다!
+                상담 신청이 완료되었습니다!
               </h3>
               <p className="text-lg text-gray-600 mb-2">
-                빠른 시일 내에 전문 상담사가 연락드리겠습니다.
+                산재 전문 노무사·변호사가 빠르게 연락드리겠습니다.
               </p>
               <p className="text-sm text-gray-500">
-                영업시간: 평일 09:00 - 18:00
+                24시간 접수 가능 | 영업시간: 평일 09:00 - 18:00
               </p>
             </motion.div>
           )}

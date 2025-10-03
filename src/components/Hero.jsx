@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronDown, Sparkles, TrendingDown, Shield } from 'lucide-react';
+import { ChevronDown, Award, Scale, Phone } from 'lucide-react';
 
 const Hero = () => {
   const scrollToForm = () => {
@@ -63,8 +63,8 @@ const Hero = () => {
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6"
           >
-            <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-semibold">정부지원 제도 안내</span>
+            <Scale className="w-4 h-4" />
+            <span className="text-sm font-semibold">법무법인 선인파트너스 산재특화센터</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -75,15 +75,23 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="block"
             >
-              10초만에
+              산재 승인
             </motion.span>
             <motion.span
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6 }}
+              className="block"
+            >
+              거부당하셨나요?
+            </motion.span>
+            <motion.span
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.8 }}
               className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
             >
-              간편조회
+              포기하지 마세요
             </motion.span>
           </h1>
 
@@ -91,50 +99,50 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
+            transition={{ delay: 1 }}
             className="text-xl md:text-3xl text-gray-700 font-semibold mb-4"
           >
-            내 대출금 줄일 수 있다?!
+            5년 이상 근무 → 승인 가능성 <span className="text-accent-600">85%</span>
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1 }}
+            transition={{ delay: 1.2 }}
             className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            간단한 정보만 입력하면 정부제도 조회 끝!
+            <span className="text-accent-600 font-semibold">지금 바로 30초 진단</span>으로 확인하세요
             <br />
-            <span className="text-accent-600 font-semibold">최대 90% 대출 감면</span> 가능 여부를 확인하세요
+            15년 전문 경력의 노무사·변호사가 함께합니다
           </motion.p>
 
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 1.4 }}
             className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-12"
           >
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
               <div className="flex items-center justify-center mb-2">
-                <TrendingDown className="w-8 h-8 text-accent-600" />
+                <Award className="w-8 h-8 text-accent-600" />
               </div>
-              <p className="text-2xl md:text-3xl font-bold text-gray-900">90%</p>
-              <p className="text-sm text-gray-600">최대 감면율</p>
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">15년</p>
+              <p className="text-sm text-gray-600">전문 경력</p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
               <div className="flex items-center justify-center mb-2">
-                <Shield className="w-8 h-8 text-blue-600" />
+                <Scale className="w-8 h-8 text-blue-600" />
               </div>
-              <p className="text-2xl md:text-3xl font-bold text-gray-900">100%</p>
-              <p className="text-sm text-gray-600">정보 보안</p>
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">노무사</p>
+              <p className="text-sm text-gray-600">+변호사</p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
               <div className="flex items-center justify-center mb-2">
-                <Sparkles className="w-8 h-8 text-purple-600" />
+                <Phone className="w-8 h-8 text-purple-600" />
               </div>
-              <p className="text-2xl md:text-3xl font-bold text-gray-900">10초</p>
-              <p className="text-sm text-gray-600">빠른 조회</p>
+              <p className="text-2xl md:text-3xl font-bold text-gray-900">24시간</p>
+              <p className="text-sm text-gray-600">접수 가능</p>
             </div>
           </motion.div>
 
@@ -142,23 +150,23 @@ const Hero = () => {
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.4 }}
+            transition={{ delay: 1.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={scrollToForm}
             className="btn-primary text-lg md:text-xl inline-flex items-center gap-2"
           >
-            무료로 조회하기
+            💬 무료 상담 신청하기
             <ChevronDown className="w-5 h-5 animate-bounce" />
           </motion.button>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.6 }}
+            transition={{ delay: 1.8 }}
             className="mt-4 text-sm text-gray-500"
           >
-            ※ 개인정보는 암호화되어 안전하게 처리됩니다
+            ⚠️ 산재 신청 기한은 <strong className="text-red-600">3년</strong>입니다. 시효 만료 전 지금 바로 상담받으세요
           </motion.p>
         </motion.div>
 

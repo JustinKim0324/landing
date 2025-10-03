@@ -5,39 +5,39 @@ import { Clock, Lock, Target, Users, CheckCircle, Zap } from 'lucide-react';
 const Features = () => {
   const features = [
     {
-      icon: Clock,
-      title: '10초 간편 조회',
-      description: '복잡한 절차 없이 간단한 정보만으로 빠르게 확인',
+      icon: Users,
+      title: '노무사 + 변호사',
+      description: '공인노무사와 변호사가 함께 사건을 진행합니다',
       color: 'blue'
     },
     {
-      icon: Lock,
-      title: '안전한 정보보호',
-      description: '모든 개인정보는 암호화되어 안전하게 보관 후 즉시 폐기',
+      icon: Target,
+      title: '15년 전문 경력',
+      description: '산재 분야만 전문으로 15년간 연구해왔습니다',
       color: 'green'
     },
     {
-      icon: Target,
-      title: '맞춤형 제도 추천',
-      description: '나의 상황에 딱 맞는 정부 지원제도를 찾아드립니다',
+      icon: CheckCircle,
+      title: '높은 승인율',
+      description: '체계적인 사건 관리로 높은 승인율을 자랑합니다',
       color: 'purple'
     },
     {
-      icon: Users,
-      title: '전문가 상담',
-      description: '법무법인 소속 전문가가 친절하게 상담해드립니다',
+      icon: Zap,
+      title: '성공보수제',
+      description: '승인 전까지 비용 부담 없이 안심하고 진행하실 수 있습니다',
       color: 'orange'
     },
     {
-      icon: CheckCircle,
-      title: '정부 공인 제도',
-      description: '국가에서 인정한 공식 채무조정 프로그램',
+      icon: Clock,
+      title: '24시간 상담 접수',
+      description: '언제든지 편하신 시간에 상담을 신청하실 수 있습니다',
       color: 'red'
     },
     {
-      icon: Zap,
-      title: '빠른 처리',
-      description: '신청부터 승인까지 최단기간 내 진행',
+      icon: Lock,
+      title: '비밀 보장',
+      description: '모든 상담 내용은 철저히 비밀로 보장됩니다',
       color: 'indigo'
     }
   ];
@@ -86,10 +86,10 @@ const Features = () => {
           className="text-center mb-16"
         >
           <h2 className="section-title">
-            왜 우리 서비스를 선택해야 할까요?
+            법무법인 선인파트너스 산재路를 선택해야 하는 이유
           </h2>
           <p className="section-subtitle">
-            간단하고 안전하게, 당신의 새 출발을 응원합니다
+            산재 전문가와 함께라면 승인 가능성이 높아집니다
           </p>
         </motion.div>
 
@@ -132,14 +132,14 @@ const Features = () => {
           className="mt-20"
         >
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            이용 절차
+            산재 승인까지 프로세스
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              { step: '01', title: '정보 입력', desc: '간단한 정보 입력' },
-              { step: '02', title: '제도 조회', desc: '맞춤 제도 확인' },
-              { step: '03', title: '전문가 상담', desc: '무료 상담 진행' },
-              { step: '04', title: '신청 완료', desc: '빠른 처리 시작' }
+              { step: '01', title: '무료 상담 신청', desc: '홈페이지 또는 전화 상담' },
+              { step: '02', title: '사건 분석', desc: '승인 가능성 검토' },
+              { step: '03', title: '서류 준비', desc: '전문가가 직접 작성' },
+              { step: '04', title: '승인 완료', desc: '보상금 지급까지' }
             ].map((item, index) => (
               <motion.div
                 key={index}
